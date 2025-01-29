@@ -17,3 +17,5 @@ options(
 # Enable autocompletions for package names in
 # `require()`, `library()`
 utils::rc.settings(ipck = TRUE)
+
+library(fcuk)
