@@ -18,4 +18,6 @@ options(
 # `require()`, `library()`
 utils::rc.settings(ipck = TRUE)
 
-library(fcuk)
+if (interactive()) {
+  suppressMessages(require(fcuk))
+}
