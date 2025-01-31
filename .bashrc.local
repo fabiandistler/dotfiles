@@ -70,3 +70,8 @@ git_status_rel () {
 
 # Enable GitHub CLI autocompletion for Bash
 eval "$(gh completion -s bash)"
+
+function prev() {
+  PREV=$(echo `history | tail -n2 | head -n1` | sed 's/[0-9]* //')
+  sh -c "pet new `printf %q "$PREV"`"
+}
