@@ -68,19 +68,22 @@ git_status_rel () {
 # Enable GitHub CLI autocompletion for Bash
 eval "$(gh completion -s bash)"
 
+
 # Utils for pet snippet cli
 
 # Only source pet completion if pet is installed
 if command -v pet &> /dev/null; then
     source <(pet completion bash)
-fi
 
+
+# Search snippet on ^x r
 function pet-select() {
   BUFFER=$(pet search --query "$READLINE_LINE")
   READLINE_LINE=$BUFFER
   READLINE_POINT=${#BUFFER}
 }
 bind -x '"\C-x\C-r": pet-select'
+
 
 export FZF_CTRL_R_OPTS="
   --reverse
@@ -96,3 +99,5 @@ function prev() {
   PREV=$(echo `history | tail -n2 | head -n1` | sed 's/[0-9]* //')
   sh -c "pet new `printf %q "$PREV"`"
 }
+
+fi
