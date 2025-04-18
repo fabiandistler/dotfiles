@@ -17,7 +17,3 @@ options(
 # Enable autocompletions for package names in
 # `require()`, `library()`
 utils::rc.settings(ipck = TRUE)
-
-if (interactive()) {
-  suppressMessages(require(fcuk))
-}
