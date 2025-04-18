@@ -6,6 +6,10 @@ case $- in
 	*) return ;;
 esac
 
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+
+
 # Path to the bash it configuration
 export BASH_IT="/home/fd/.bash_it"
 
