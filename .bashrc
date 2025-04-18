@@ -81,3 +81,6 @@ alias au="sudo apt-fast update && apt-fast upgrade"
 
 eval "$(uv generate-shell-completion bash)"
 eval "$(uvx --generate-shell-completion bash)"
+
+source "$HOME"/.venv/bin/activate
+
